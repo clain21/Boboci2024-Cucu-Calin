@@ -55,13 +55,13 @@ public class LinearDriveMode extends LinearOpMode {
 
 
             if (gamepad2.left_bumper) {
-                robot.crane.slidesDirection = 1; 
+                robot.crane.slidesDirection = -1; //schimbat
                 robot.crane.setSlides(5);
                 if(robot.crane.slideEncoderLastPosition > robot.crane.slideEncoder.getVoltage()){
                     robot.crane.slideExtension -= 3.3;
                 }
             } else if (gamepad2.right_bumper) {
-                robot.crane.slidesDirection = -1;
+                robot.crane.slidesDirection = 1; //schimbat
                 robot.crane.setSlides(5);
                 if(robot.crane.slideEncoderLastPosition < robot.crane.slideEncoder.getVoltage()){
                     robot.crane.slideExtension += 3.3;
